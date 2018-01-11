@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         items.add(new DataItem(1,"美团","12.36",getColor(R.color.red)));
         items.add(new DataItem(23,"Google","56.23",getColor(R.color.black)));
         items.add(new DataItem(1,"沃尔玛","45.56",getColor(R.color.red)));
-        items.add(new DataItem(2,"UC浏览器","45.56",getColor(R.color.green)));
         items.add(new DataItem(35,"阿里巴巴","45.56",getColor(R.color.blue)));
         items.add(new DataItem(2,"华为","45.56",getColor(R.color.black)));
         items.add(new DataItem(3,"斗鱼","45.56",getColor(R.color.blue)));
@@ -31,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         items.add(new DataItem(24,"京东","35.56",getColor(R.color.green)));
         items.add(new DataItem(23,"Windows","37.25",getColor(R.color.yellow)));
         items.add(new DataItem(12,"头条","334.25",getColor(R.color.blue)));
-        items.add(new DataItem(1,"IBM","37.25",getColor(R.color.black)));
-
+        items.add(new DataItem(13,"IBM","37.25",getColor(R.color.black)));
         discView.setItems(items);
     }
 }

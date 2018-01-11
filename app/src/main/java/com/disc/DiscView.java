@@ -64,7 +64,7 @@ public class DiscView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int widthSize  = MeasureSpec.getSize(widthMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-        radius = 2*heightSize/6;
+        radius = 7*heightSize/24;
         centerRadius = heightSize/6;
         setMeasuredDimension(widthSize,heightSize);
     }
@@ -117,7 +117,7 @@ public class DiscView extends View {
     private Point getEndPoint(Point point,Point prePoint) {
         if (prePoint != null&&point.x*prePoint.x>=0){
             int distance = Math.abs(prePoint.y - point.y);
-            if (distance < 2*itemHeight){
+            if (distance < 3*itemHeight/2||(point.y>=0&&prePoint.y>point.y)||(point.y<0&&prePoint.y<point.y)){
                 Point endPoint = new Point();
                 endPoint.x = point.x>0?getWidth()/2-margin:-getWidth()/2+margin;
                 endPoint.y = point.y>=0?prePoint.y+2*itemHeight:prePoint.y-2*itemHeight;
@@ -142,6 +142,7 @@ public class DiscView extends View {
         }else {
             endPoint.y = point.y;
         }
+        Log.e("TTT",point+"  "+endPoint);
         return endPoint;
     }
 
@@ -172,6 +173,7 @@ public class DiscView extends View {
     }
 
     private void drawDataLine(Point start,Point end,Canvas canvas,DataItem item){
+        Log.e("AAA",start+"  "+end);
         mPaint.setColor(item.getColor());
         canvas.drawCircle(start.x,start.y,radius/20,mPaint);
         if (start.y != end.y){

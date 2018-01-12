@@ -204,9 +204,9 @@ public class DiscView extends View {
             float x = point.x +(point.x>0?-getAlignLength(text):0);
             float y ;
             if (isTop){
-                y = point.y + (itemHeight+textSize)/2;
-            }else {
                 y = point.y - (itemHeight-textSize)/2;
+            }else {
+                y = point.y + (itemHeight+textSize)/2;
             }
             canvas.drawText(text,x,y,textPaint);
         }

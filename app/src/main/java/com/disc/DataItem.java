@@ -6,13 +6,21 @@ package com.disc;
 
 public class DataItem {
 
-
+    /**
+     * 所占值
+     */
     private int value;
-
+    /**
+     * 顶部文本
+     */
     private String topText;
-
+    /**
+     * 底部文本
+     */
     private String bottomText;
-
+    /**
+     * 颜色
+     */
     private int color;
 
     public DataItem(int value, String topText, String bottomText, int color) {
